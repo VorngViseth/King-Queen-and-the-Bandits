@@ -10,7 +10,7 @@ the king is trying to save the upcoming queen (his feance) from the well knownn 
 ## this is a 2D game and have 4 phase : 
 
 
-## 1. opening : 
+### 1. opening : 
 
 
 the opening shows the story of two ppls getting engage (prince and princess).
@@ -18,14 +18,14 @@ while they are getting engage a group of well known bandits breaks into the cast
 they bemand gold and assets to trade for her life in the span of 10 days. and flee with the princes.
 
 
-## 2. journey to save the princes :
+### 2. journey to save the princes :
 
 
 without trying to fight or do anything to put the princes's life into danger.
 while the prince and his guards are making their way through the forest, they got ambush my monster (player have to fihgt the monster)
 
 
-## 3. get the princess back :  (if the player managed to survive and keep the gold safe) 
+### 3. get the princess back :  (if the player managed to survive and keep the gold safe) 
 
 
 after survive the attacks in the forest they finally at the place where the prince offer the gold and take back his princess.
@@ -33,13 +33,13 @@ after getting the princess back, the bandits see that the prince and the guards 
 they are having a battle. (user need to survive and keep the princes save)
 
 
-## 4. journey back : (if both condition are good)
+### 4. journey back : (if both condition are good)
 
 
 - need to survive the night and make their way back to the castle
 
 
-## ------GAME OVER------
+### ------GAME OVER------
 
 
 ## game machanics 
@@ -64,7 +64,7 @@ they are having a battle. (user need to survive and keep the princes save)
 - get back to the castle
 
 
-## gameplay flow
+### gameplay flow
 
 
 MENU(difficulty) ->  opening -> journey to save the princess 
@@ -85,7 +85,7 @@ journey back
 - if not -> win game -> end screen -> restart?
 
 
-## player's movements
+### player's movements
 
 
 W : forward
@@ -106,7 +106,7 @@ J : Attack
 H : heal
 
 
-(player can move diagonal, Ex : move diagonal by pressing W-D..._)
+(player can move diagonal, Ex : move diagonal by pressing W-D...)
 
 
 
