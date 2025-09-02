@@ -13,7 +13,7 @@ the king is trying to save the upcoming queen (his feance) from the well knownn 
 ## 1. opening : 
 
 
-the opening shows the story of two ppls getting engage (prince and princes).
+the opening shows the story of two ppls getting engage (prince and princess).
 while they are getting engage a group of well known bandits breaks into the castle and kitnaped the princes.
 they bemand gold and assets to trade for her life in the span of 10 days. and flee with the princes.
 
@@ -40,3 +40,46 @@ they are having a battle. (user need to survive and keep the princes save)
 
 
 ## ------GAME OVER------
+
+
+## game machanics 
+
+
+##  game's core 
+
+
+## loose condition 
+
+
+you'll lose the game if :
+
+- the gold is less than 10000 gold
+- sdfsfsfsd
+
+
+## player's movements
+
+
+W : forward
+
+
+A : left
+
+
+S : back
+
+
+D : right
+
+
+J : Attack
+
+
+H : heal
+
+
+(player can move diagonal, Ex : move diagonal by pressing W-D..._)
+
+
+
+
