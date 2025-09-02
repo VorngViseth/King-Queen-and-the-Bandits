@@ -45,16 +45,44 @@ they are having a battle. (user need to survive and keep the princes save)
 ## game machanics 
 
 
-##  game's core 
+### lose condition 
 
-
-## loose condition 
-
-
-you'll lose the game if :
 
 - the gold is less than 10000 gold
-- sdfsfsfsd
+- the princess is dead
+- you are dead
+- cannot meet the bandits within 10 days(game's day)
+
+
+### win condition
+
+
+- meet the bandits within 10days(game's day)
+- survive the monster attack
+- have enough gold to save the princess
+- keep the princess safe
+- get back to the castle
+
+
+## gameplay flow
+
+
+MENU(difficulty) ->  opening -> journey to save the princess 
+
+
+journey to save the princess
+- if any of the lose condition become true -> game over -> restart
+- if not ->  get the princess back 
+
+
+get the princess back 
+- if any of the lose condition become true -> game over -> restart
+- if not -> journey back 
+
+
+journey back 
+- if any of the lose condition become true -> game over -> restart
+- if not -> win game -> end screen -> restart?
 
 
 ## player's movements
