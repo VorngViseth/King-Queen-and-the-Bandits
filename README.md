@@ -4,7 +4,7 @@
 ## game concept :
 
 
-the king is trying to save the upcoming queen (his feance) from the well knownn group of bandits who kitnaped her.
+the king is trying to save the upcoming queen (his fiance) from the well known group of bandits who kidnaped her.
 
 
 ## this is a 2D game and have 4 phase : 
@@ -13,16 +13,16 @@ the king is trying to save the upcoming queen (his feance) from the well knownn 
 ### 1. opening : 
 
 
-the opening shows the story of two ppls getting engage (prince and princess).
-while they are getting engage a group of well known bandits breaks into the castle and kitnaped the princes.
-they bemand gold and assets to trade for her life in the span of 10 days. and flee with the princes.
+the opening shows the story of two people getting engage (prince and princess).
+while they are getting engage a group of well known bandits breaks into the castle and kidnaped the princes.
+they demand gold and assets to trade for her life in the span of 10 days. and flee with the princes.
 
 
 ### 2. journey to save the princes :
 
 
 without trying to fight or do anything to put the princes's life into danger.
-while the prince and his guards are making their way through the forest, they got ambush my monster (player have to fihgt the monster)
+while the prince and his guards are making their way through the forest, they got ambush my monster (player have to fight the monster)
 
 
 ### 3. get the princess back :  (if the player managed to survive and keep the gold safe) 
@@ -42,7 +42,7 @@ they are having a battle. (user need to survive and keep the princes save)
 ### ------GAME OVER------
 
 
-## game machanics 
+## game mechanics  
 
 
 ### lose condition 
