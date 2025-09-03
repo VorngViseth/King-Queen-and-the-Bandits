@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cikeb4nc2f5rg"]
+
+[ext_resource type="Script" uid="uid://crahcfv4aumu8" path="res://scripts/guard.gd" id="1_ci2qi"]
+[ext_resource type="Texture2D" uid="uid://chvrvgbt2km44" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_m4fl1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci2qi"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0dx2"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygo2t"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn8tx"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dfqo"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywdc2"]
+atlas = ExtResource("1_m4fl1")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4sgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci2qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0dx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygo2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn8tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dfqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywdc2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmy4q"]
+size = Vector2(11.8367, 13.7658)
+
+[node name="guard" type="CharacterBody2D"]
+scale = Vector2(2.17779, 2.12438)
+script = ExtResource("1_ci2qi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.918363, -11.2974)
+scale = Vector2(1.90546, 1.57028)
+sprite_frames = SubResource("SpriteFrames_c4sgu")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.00967559
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.459182, -10.356)
+shape = SubResource("RectangleShape2D_rmy4q")

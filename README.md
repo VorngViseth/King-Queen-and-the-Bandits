@@ -109,5 +109,43 @@ H : heal
 (player can move diagonal, Ex : move diagonal by pressing W-D...)
 
 
+## game engine 
+
+
+[Godot](https://godotengine.org/)
+
+
+## characters 
+
+
+### bandits
+
+
+boss , normal
+
+
+### monster(goblin) 
+
+
+stealer goblin, attacker goblin
+
+
+### hero 
+
+
+prince, princess, guard, 
+
+
+### sceneries 
+
+
+houses, tree, bushes
+
+
+### scenes
+
+
+castle(kingdom), forest, meetup place(rocy area in the forest), way back(in the forest)
+
 
 
