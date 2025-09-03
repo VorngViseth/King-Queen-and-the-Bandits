@@ -7,7 +7,7 @@
 the king is trying to save the upcoming queen (his fiance) from the well known group of bandits who kidnaped her.
 
 
-## this is a 2D game and have 4 phase : 
+## this is a 2D game and have 4 phase :     (REWORK !!!)
 
 
 ### 1. opening : 
