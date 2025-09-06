@@ -38,7 +38,7 @@ Now is quite and the air feels dense. Soon they'll get ambush my the monsters th
 ### 3. forest arc 
 
 
-
+There will be some side tasks for the forest arc... the side task will lead the knight to the place where him and the boss monster meet     
 
 
 ### 4. ruins arc(final monster boss)
@@ -79,22 +79,6 @@ Now is quite and the air feels dense. Soon they'll get ambush my the monsters th
 ### gameplay flow
 
 
-MENU(difficulty) ->  opening -> journey to save the princess 
-
-
-journey to save the princess
-- if any of the lose condition become true -> game over -> restart
-- if not ->  get the princess back 
-
-
-get the princess back 
-- if any of the lose condition become true -> game over -> restart
-- if not -> journey back 
-
-
-journey back 
-- if any of the lose condition become true -> game over -> restart
-- if not -> win game -> end screen -> restart?
 
 
 ### player's movements
@@ -178,3 +162,22 @@ they are having a battle. (user need to survive and keep the princes save)
 
 
 need to survive the night and make their way back to the castle
+
+
+
+MENU(difficulty) ->  opening -> journey to save the princess 
+
+
+journey to save the princess
+- if any of the lose condition become true -> game over -> restart
+- if not ->  get the princess back 
+
+
+get the princess back 
+- if any of the lose condition become true -> game over -> restart
+- if not -> journey back 
+
+
+journey back 
+- if any of the lose condition become true -> game over -> restart
+- if not -> win game -> end screen -> restart?
