@@ -38,7 +38,8 @@ Now is quite and the air feels dense. Soon they'll get ambush my the monsters th
 ### 3. forest arc 
 
 
-There will be some side tasks for the forest arc... the side task will lead the knight to the place where him and the boss monster meet     
+There will be some side tasks for the forest arc... the side task will lead the knight to the place where him and the boss monster meet 
+
 
 
 ### 4. ruins arc(final monster boss)

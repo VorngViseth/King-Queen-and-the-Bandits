@@ -1,84 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8gyhctrxsmij"]
+[gd_scene load_steps=3 format=3 uid="uid://cnc7dphp45tyv"]
 
 [ext_resource type="PackedScene" uid="uid://cikeb4nc2f5rg" path="res://scenes/guard.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://mlnownawan7w" path="res://scripts/slime.gd" id="2_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://c01w1pvnp47a0" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Orc/Orc with shadows/Orc-Idle.png" id="2_yqjtg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(100, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(300, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(400, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
-atlas = ExtResource("2_yqjtg")
-region = Rect2(500, 0, 100, 100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0tnpc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lnu2h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lbhrr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iywne")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p57ef")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u5sy4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gee14")
-}],
-"loop": true,
-"name": &"idl",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yqjtg"]
-radius = 13.0
-height = 46.0
+[ext_resource type="PackedScene" uid="uid://c7etn8e1e7c8o" path="res://scenes/goblin.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
-position = Vector2(-45, -20)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(45, -2)
-scale = Vector2(5.55536, 5.87432)
-zoom = Vector2(2, 2)
 
 [node name="guard" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(44, 18.9998)
+position = Vector2(-167, -9.53674e-07)
 
-[node name="slime" type="CharacterBody2D" parent="."]
-script = ExtResource("2_lnu2h")
+[node name="Goblin" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(310, -8)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slime"]
-position = Vector2(195, -7)
-scale = Vector2(2.90117, 3.25926)
-sprite_frames = SubResource("SpriteFrames_0tnpc")
-animation = &"idl"
-autoplay = "idl"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime"]
-position = Vector2(197, -4)
-shape = SubResource("CapsuleShape2D_yqjtg")
+[node name="Camera2D" type="Camera2D" parent="."]

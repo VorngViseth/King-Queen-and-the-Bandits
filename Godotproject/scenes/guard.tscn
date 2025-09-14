@@ -116,20 +116,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k0dx2"]
-radius = 8.26526
-height = 24.4777
+radius = 2.82969
+height = 13.4192
 
 [node name="guard" type="CharacterBody2D"]
-scale = Vector2(2.17779, 2.12438)
+scale = Vector2(5, 5)
 script = ExtResource("1_ci2qi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.918363, -11.2974)
-scale = Vector2(1.90546, 1.57028)
 sprite_frames = SubResource("SpriteFrames_c4sgu")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.287615
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -12.7096)
+position = Vector2(0.4, -0.6)
+scale = Vector2(1.06019, 1)
 shape = SubResource("CapsuleShape2D_k0dx2")
