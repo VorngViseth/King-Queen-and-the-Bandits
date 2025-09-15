@@ -41,6 +41,17 @@ Now is quite and the air feels dense. Soon they'll get ambush my the monsters th
 There will be some side tasks for the forest arc... the side task will lead the knight to the place where him and the boss monster meet 
 
 
+the side tasks : 
+- help the witch clear up the monster in her area 
+- help return the witch's staff that she lost in the forest
+- aquired him to make healing potion from the help of a witch in the forest
+
+
+after making the potion the kngiht will meet the forest boss monster
+
+
+the forest boss will tell him exactly where the last artifact is and how to find it, if he really wants it and distroy the world by causing the imbalance of nature.
+
 
 ### 4. ruins arc(final monster boss)
 
@@ -56,25 +67,6 @@ There will be some side tasks for the forest arc... the side task will lead the 
 
 
 ## game mechanics  
-
-
-### lose condition 
-
-
-- the gold is less than 10000 gold
-- the princess is dead
-- you are dead
-- cannot meet the bandits within 10 days(game's day)
-
-
-### win condition
-
-
-- meet the bandits within 10days(game's day)
-- survive the monster attack
-- have enough gold to save the princess
-- keep the princess safe
-- get back to the castle
 
 
 ### gameplay flow
@@ -143,42 +135,3 @@ houses, tree, bushes
 
 
 castle(kingdom), forest, meetup place(rock area in the forest), way back(in the forest)
-
-
-## ols story 
-
-
-the opening shows the story of two people getting engage (prince and princess).
-while they are getting engage a group of well known bandits breaks into the castle and kidnaped the princes.
-they demand gold and assets to trade for her life in the span of 10 days. and flee with the princes.
-
-
-without trying to fight or do anything to put the princes's life into danger.
-while the prince and his guards are making their way through the forest, they got ambush my monster (player have to fight the monster)
-
-
-after survive the attacks in the forest they finally at the place where the prince offer the gold and take back his princess.
-after getting the princess back, the bandits see that the prince and the guards are weakened they decide to not let them go. 
-they are having a battle. (user need to survive and keep the princes save)
-
-
-need to survive the night and make their way back to the castle
-
-
-
-MENU(difficulty) ->  opening -> journey to save the princess 
-
-
-journey to save the princess
-- if any of the lose condition become true -> game over -> restart
-- if not ->  get the princess back 
-
-
-get the princess back 
-- if any of the lose condition become true -> game over -> restart
-- if not -> journey back 
-
-
-journey back 
-- if any of the lose condition become true -> game over -> restart
-- if not -> win game -> end screen -> restart?
