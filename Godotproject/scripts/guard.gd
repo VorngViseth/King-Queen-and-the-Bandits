@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 
 		if direction.x < 0:
 			animated_sprite.flip_h = true
-		elif direction_x > 0:
+		elif direction.x > 0:
 			animated_sprite.flip_h = false
 			
 	else:
