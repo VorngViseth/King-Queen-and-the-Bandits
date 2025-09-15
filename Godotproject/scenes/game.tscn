@@ -6,7 +6,8 @@
 [node name="Game" type="Node2D"]
 
 [node name="guard" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-167, -9.53674e-07)
+position = Vector2(-3, 0)
+scale = Vector2(4.89935, 5.06545)
 
 [node name="Goblin" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(310, -8)

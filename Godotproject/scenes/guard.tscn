@@ -115,9 +115,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k0dx2"]
-radius = 2.82969
-height = 9.38029
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0dx2"]
 
 [node name="guard" type="CharacterBody2D"]
 scale = Vector2(5, 5)
@@ -129,9 +127,9 @@ animation = &"walk"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.6)
-scale = Vector2(1.53154, 1.53513)
-shape = SubResource("CapsuleShape2D_k0dx2")
+position = Vector2(0.2, 1)
+scale = Vector2(0.4078, 0.398642)
+shape = SubResource("CircleShape2D_k0dx2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1.34702, 0.566938)

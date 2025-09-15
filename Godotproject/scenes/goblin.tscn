@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c7etn8e1e7c8o"]
+[gd_scene load_steps=36 format=3 uid="uid://c7etn8e1e7c8o"]
 
 [ext_resource type="Script" uid="uid://1dq3quvuwik5" path="res://scripts/goblin.gd" id="1_4yait"]
 [ext_resource type="Texture2D" uid="uid://b10iobe2hdvuf" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Orc/Orc with shadows/Orc-Attack01.png" id="2_g1p1y"]
@@ -211,13 +211,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vho8j"]
-radius = 2.77608
-height = 9.16105
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1p1y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3g0h"]
-radius = 31.7586
-height = 108.072
+radius = 31.3103
+height = 122.482
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1p1y"]
+size = Vector2(133.975, 93)
 
 [node name="Goblin" type="CharacterBody2D"]
 scale = Vector2(5, 5)
@@ -225,23 +226,33 @@ script = ExtResource("1_4yait")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u21pb")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.929533
+frame_progress = 0.758713
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.2, -0.2)
-scale = Vector2(1.24358, 1.32665)
-shape = SubResource("CapsuleShape2D_vho8j")
+position = Vector2(0.2, 1)
+scale = Vector2(0.4, 0.427)
+shape = SubResource("CircleShape2D_g1p1y")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="attackZone" type="Area2D" parent="."]
 position = Vector2(1, 0.6)
 scale = Vector2(2.72666, -1.35181)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attackZone"]
 position = Vector2(0.0733499, 0.591801)
 scale = Vector2(-0.159302, 0.0821396)
 shape = SubResource("CapsuleShape2D_q3g0h")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="detectionZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionZone"]
+scale = Vector2(1.00168, 1)
+shape = SubResource("RectangleShape2D_g1p1y")
+
+[connection signal="body_entered" from="attackZone" to="." method="_on_attack_zone_body_entered"]
+[connection signal="body_entered" from="attackZone" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="attackZone" to="." method="_on_attack_zone_body_exited"]
+[connection signal="body_exited" from="attackZone" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="detectionZone" to="." method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="detectionZone" to="." method="_on_detection_zone_body_exited"]
