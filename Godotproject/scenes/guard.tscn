@@ -1,8 +1,33 @@
-[gd_scene load_steps=20 format=3 uid="uid://cikeb4nc2f5rg"]
+[gd_scene load_steps=27 format=3 uid="uid://cikeb4nc2f5rg"]
 
 [ext_resource type="Script" uid="uid://crahcfv4aumu8" path="res://scripts/guard.gd" id="1_ci2qi"]
 [ext_resource type="Texture2D" uid="uid://dgei2ho1uht0e" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Idle.png" id="2_k0dx2"]
+[ext_resource type="Texture2D" uid="uid://clr8wfj6f871n" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Attack01.png" id="2_ygo2t"]
 [ext_resource type="Texture2D" uid="uid://6c7p51b68l3d" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Walk.png" id="3_k0dx2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1axas"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snqa8"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3yqu"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uylac"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b24lj"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hspyp"]
+atlas = ExtResource("2_ygo2t")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygo2t"]
 atlas = ExtResource("2_k0dx2")
@@ -64,6 +89,29 @@ region = Rect2(700, 0, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1axas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snqa8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3yqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uylac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b24lj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hspyp")
+}],
+"loop": false,
+"name": &"basicAttack",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ygo2t")
 }, {
 "duration": 1.0,
@@ -122,8 +170,9 @@ scale = Vector2(5, 5)
 script = ExtResource("1_ci2qi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_c4sgu")
-animation = &"walk"
+animation = &"basicAttack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -138,3 +187,5 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_attack_animation_finished"]

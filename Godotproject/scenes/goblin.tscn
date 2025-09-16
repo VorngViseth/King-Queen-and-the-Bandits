@@ -214,8 +214,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1p1y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3g0h"]
-radius = 31.3103
-height = 122.482
+radius = 14.649
+height = 157.209
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1p1y"]
 size = Vector2(133.975, 93)
@@ -225,14 +225,15 @@ scale = Vector2(5, 5)
 script = ExtResource("1_4yait")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_u21pb")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.758713
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.2, 1)
-scale = Vector2(0.4, 0.427)
+position = Vector2(0.6, 1.4)
+scale = Vector2(0.4, 0.407)
 shape = SubResource("CircleShape2D_g1p1y")
 
 [node name="attackZone" type="Area2D" parent="."]
@@ -240,8 +241,8 @@ position = Vector2(1, 0.6)
 scale = Vector2(2.72666, -1.35181)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attackZone"]
-position = Vector2(0.0733499, 0.591801)
-scale = Vector2(-0.159302, 0.0821396)
+position = Vector2(7.45058e-09, -0.591799)
+scale = Vector2(-0.37053, -0.047055)
 shape = SubResource("CapsuleShape2D_q3g0h")
 
 [node name="detectionZone" type="Area2D" parent="."]

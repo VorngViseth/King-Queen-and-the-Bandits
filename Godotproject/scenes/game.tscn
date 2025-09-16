@@ -4,10 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c7etn8e1e7c8o" path="res://scenes/goblin.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 
 [node name="guard" parent="." instance=ExtResource("1_uwrxv")]
+y_sort_enabled = true
 position = Vector2(-3, 0)
 scale = Vector2(4.89935, 5.06545)
 
 [node name="Goblin" parent="." instance=ExtResource("2_yqjtg")]
+y_sort_enabled = true
 position = Vector2(310, -8)
