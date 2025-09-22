@@ -58,11 +58,6 @@ func _attacking() -> void:
 	animated_sprite.play("attack")
 	return
 
-#Dealing dammage
-#func _on_attack_finished(animName: String) -> void:
-	#if animName == "attack" and target:
-		#target._takeDamage(10)
-
-
+#Dealing damage
 func _on_timer_timeout() -> void:
 	target._takeDamage(10)
