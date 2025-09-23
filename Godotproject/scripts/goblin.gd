@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 100.0
 @onready var target = $"../guard"
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var timer: Timer = $Timer
+#@onready var timer: Timer = $Timer
 
 var attacking = false
 var chasing = false
@@ -45,12 +45,12 @@ func _on_detection_zone_body_exited(body: Node2D) -> void:
 func _on_attack_zone_body_entered(body: Node2D) -> void:
 	if body.name == "guard":
 		attacking = true
-		timer.start()
+		#timer.start()
 
 func _on_attack_zone_body_exited(body: Node2D) -> void:
 	if body.name == "guard":
 		attacking = false
-		timer.stop()
+		#timer.stop()
 
 #Attacking
 func _attacking() -> void:
@@ -59,5 +59,6 @@ func _attacking() -> void:
 	return
 
 #Dealing damage
-func _on_timer_timeout() -> void:
-	target._takeDamage(10)
+func _on_attack_animation_finished() -> void:
+	if target:
+		target._takeDamage(10)

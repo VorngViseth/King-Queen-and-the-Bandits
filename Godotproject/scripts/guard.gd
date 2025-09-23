@@ -50,6 +50,7 @@ func _basicAttack() -> void:
 func _on_attack_animation_finished() -> void:
 	if basicAttack:
 		basicAttack = false
+		print(basicAttack)
 
 #Take damage
 func _takeDamage(amout: int) -> void:
