@@ -5,7 +5,10 @@ var hp = 100
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+var enemiesInZone: Array = []
 var basicAttack = false
+var dead = false
+var temp = false #make the die animation stop
 
 func _physics_process(delta: float) -> void:
 	# Get input direction (-1 for left, 1 for right, 0 for none)
@@ -15,12 +18,15 @@ func _physics_process(delta: float) -> void:
 	
 	var basicAttackInput = Input.is_action_just_pressed("basicAttack")
 		
-	if  basicAttackInput and not basicAttack:
+	if  basicAttackInput and not basicAttack and not dead:
 		_basicAttack()
 		
-	if not basicAttack:
+	if not dead and not basicAttack:
 		_walking(direction)
-			
+	
+	if dead and not temp:
+		_dead()
+		
 	move_and_slide()
 	
 
@@ -46,13 +52,39 @@ func _basicAttack() -> void:
 	velocity = Vector2.ZERO
 	print(basicAttack)
 	return
+#Dealing damage
+func _on_attack_zone_body_entered(body: PhysicsBody2D) -> void:
+	if body == self:
+		return
+		
+	if body.has_method("_takeDamage") and not enemiesInZone.has(body):
+		enemiesInZone.append(body)
+
+func _on_attack_zone_body_exited(body: PhysicsBody2D) -> void:
+	if enemiesInZone.has(body):
+		enemiesInZone.erase(body)
 
 func _on_attack_animation_finished() -> void:
 	if basicAttack:
+		for enemy in enemiesInZone:
+			enemy._takeDamage(40)
+
 		basicAttack = false
 		print(basicAttack)
 
 #Take damage
 func _takeDamage(amout: int) -> void:
+	if dead:
+		return
+		
 	hp -= amout
+	
+	if hp <= 0:
+		dead = true
+	
 	print(hp)
+
+#Dead
+func _dead() -> void:
+	animated_sprite.play("die")
+	temp = true

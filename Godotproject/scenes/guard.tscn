@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cikeb4nc2f5rg"]
+[gd_scene load_steps=33 format=3 uid="uid://cikeb4nc2f5rg"]
 
 [ext_resource type="Script" uid="uid://crahcfv4aumu8" path="res://scripts/guard.gd" id="1_ci2qi"]
 [ext_resource type="Texture2D" uid="uid://dgei2ho1uht0e" path="res://assets/Tiny RPG Character Asset Pack v1.03b -Free Soldier&Orc/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Idle.png" id="2_k0dx2"]
@@ -140,7 +140,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qah8q")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 4.0
 }, {
@@ -199,6 +199,10 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k0dx2"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gn8tx"]
+radius = 8.2023
+height = 31.1999
+
 [node name="guard" type="CharacterBody2D"]
 scale = Vector2(5, 5)
 script = ExtResource("1_ci2qi")
@@ -223,4 +227,14 @@ rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
+[node name="attackZone" type="Area2D" parent="."]
+scale = Vector2(1.19092, 1.11111)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attackZone"]
+position = Vector2(-0.4, -1.8)
+rotation = -1.56886
+shape = SubResource("CapsuleShape2D_gn8tx")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_attack_animation_finished"]
+[connection signal="body_entered" from="attackZone" to="." method="_on_attack_zone_body_entered"]
+[connection signal="body_exited" from="attackZone" to="." method="_on_attack_zone_body_exited"]
