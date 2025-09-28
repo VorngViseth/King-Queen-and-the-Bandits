@@ -56,6 +56,27 @@ the forest boss will tell him exactly where the last artifact is and how to find
 ### 4. ruins arc(final monster boss)
 
 
+In this arc player will spend most of the time doing the side quests to prepare for the fight with the final boss such as 
+
+
+### going into caves
+
+
+get matiral to make better wepons and armor
+
+
+
+### gathering the spices
+
+
+to make the potions
+
+
+### went through monster tails
+
+
+to strengthen player's abillitys they must to through and fight off alot of monsters
+
 
 ### ending 1
 
@@ -89,7 +110,7 @@ S : back
 D : right
 
 
-J : Attack
+K : Attack
 
 
 H : heal
